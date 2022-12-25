@@ -34,7 +34,7 @@
 						<muleVersion>${app.runtime}</muleVersion>
 					    <uri>https://anypoint.mulesoft.com</uri>
 					    <target>localhost</target>
-					    <targetType>Server</targetType>
+					    <targetType>server</targetType>
 					    <username>ashok_chaganti</username>
 					    <password>Iagts10p@</password>
 					    <environment>Sandbox</environment>
