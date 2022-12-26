@@ -8,12 +8,28 @@
 		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
 		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
 	<munit:config name="student-details-test-suite.xml" />
-	<munit:test name="student-details-test-suite-student-details-mainTest" doc:id="d1320d29-6b40-4eda-a5bd-1da9cd201b61" description="Test">
+	<munit:test name="student-details-test-suite-post:\avg:application\json:student-details-configTest" doc:id="3e02caf6-a3e0-48e8-a098-c971ec88a0ed" description="Test">
 		<munit:execution >
-			<flow-ref doc:name="Flow-ref to student-details-main" doc:id="1c556b07-0808-430a-9663-e9c58d0b1597" name="student-details-main"/>
+			<flow-ref doc:name="Flow-ref to post:\avg:application\json:student-details-config" doc:id="174f616a-50c4-4697-975f-cd1907c27f8f" name="post:\avg:application\json:student-details-config"/>
 		</munit:execution>
-		<munit:validation>
-			<munit-tools:assert-that doc:name="Assert that" doc:id="4de100a9-dc76-49ec-9233-0d137bd849af" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="606fecee-d7d6-4d0b-9079-ed6c9006a6d3" is="#[MunitTools::notNullValue()]" expression="#[payload]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="student-details-test-suite-post:\grade:application\json:student-details-configTest" doc:id="606525b4-1afe-4d6f-b4a1-37aa0d4108ca" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to post:\grade:application\json:student-details-config" doc:id="8852ab50-b015-4a94-b164-cd2532bb1f8f" name="post:\grade:application\json:student-details-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="724a5f70-af4c-4e2a-b06e-847364464f07" is="#[MunitTools::notNullValue()]" expression="#[payload]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="student-details-test-suite-post:\total:application\json:student-details-configTest" doc:id="8d271e19-39da-4fa3-8537-fc6f568ff00a" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to post:\total:application\json:student-details-config" doc:id="24b80cfb-1f2a-4f7f-8aad-dad7dfc01742" name="post:\total:application\json:student-details-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="97c37d8a-3c2f-41f8-90b8-e047f7ea4ae5" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
 		</munit:validation>
 	</munit:test>
 
