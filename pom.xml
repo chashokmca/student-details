@@ -38,6 +38,9 @@
 					    <username>ashok_chaganti</username>
 					    <password>Iagts10p@</password>
 					    <environment>Sandbox</environment>
+					    <properties>
+					    	<mule_env>test</mule_env>
+					    </properties>
 				    </armDeployment>
 				 </configuration>
 			</plugin>
